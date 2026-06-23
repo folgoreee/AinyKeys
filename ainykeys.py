@@ -4,7 +4,9 @@ import secrets
 import string
 import math
 
-# ============================ CONFIGURAÇÕES ============================
+# ============================ 
+# CONFIGURAÇÕES 
+# ============================
 TAMANHO_MIN = 8
 TAMANHO_MAX = 128
 
@@ -14,7 +16,9 @@ janela.geometry("700x750")
 cor_fundo = "#360b41"
 janela.configure(bg=cor_fundo)
 
-# ============================ FUNÇÕES ============================
+# ============================ 
+# FUNÇÕES 
+# ============================
 
 def classificar_forca(bits):
     if bits < 28:
@@ -108,7 +112,9 @@ def copiar_senha():
     janela.after(2000, lambda: label_copiado.config(text=""))
 
 
-# ====================== INTERFACE ======================
+# ====================== 
+# INTERFACE 
+# ======================
 
 titulo = Label(janela, text="AinyKeys", font="Arial 30 bold", fg="white", bg=cor_fundo)
 titulo.place(relx=0.5, y=40, anchor=CENTER)
@@ -129,7 +135,9 @@ label_intervalo = Label(janela, text=f"(entre {TAMANHO_MIN} e {TAMANHO_MAX})",
                         font="Arial 11", fg="#cfa6d6", bg=cor_fundo)
 label_intervalo.place(x=420, y=145)
 
-# ============================ OPÇÕES DE CARACTERES ============================
+# ============================ 
+# OPÇÕES DE CARACTERES 
+# ============================
 
 var_maiusculas = BooleanVar(value=True)
 var_minusculas = BooleanVar(value=True)
@@ -162,7 +170,9 @@ check_remover_ambiguos = Checkbutton(janela, text="Remover caracteres ambíguos 
                                      variable=var_remover_ambiguos, **check_style)
 check_remover_ambiguos.place(x=50, y=360)
 
-# ============================ GERAÇÃO E EXIBIÇÃO ============================
+# ============================ 
+# GERAÇÃO E EXIBIÇÃO 
+# ============================
 
 botao_gerar = Button(janela, text="GERAR SENHA", font="Arial 14 bold",
                      bg="white", fg="#7d677e", width=18,
@@ -183,11 +193,15 @@ botao_copiar.place(x=480, y=527)
 label_copiado = Label(janela, text="", font="Arial 11 italic", fg="#2ecc71", bg=cor_fundo)
 label_copiado.place(x=50, y=565)
 
-# ============================ FORÇA DA SENHA ============================
+# ============================ 
+# FORÇA DA SENHA 
+# ============================
 
 label_entropia = Label(janela, text="Entropia: --", font="Arial 14 bold", fg="white", bg=cor_fundo)
 label_entropia.place(x=50, y=610)
 
-# ============================ FIM ============================
+# ============================
+# FIM 
+# ============================
 
 janela.mainloop()
